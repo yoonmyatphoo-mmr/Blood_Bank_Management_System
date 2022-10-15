@@ -1,0 +1,319 @@
+<html xmlns: th="http://www.thymeleaf.org">
+<head>
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #navbar {
+            position: sticky;
+            top: 0;
+        }
+
+        #left {
+            float: left;
+            width: 300px;
+            height: 1200px;
+            background-color: black;
+        }
+
+        #right {
+           /* th:style = "'background-image: url(images/form-v9.jpg)'";
+            background-image: url(static/images/blood.jpg);*/
+            background-size: cover;
+            height: 1200px;
+        }
+
+        #nav{
+            height:35%;
+        }
+
+        #nav a:link {
+            color: gray;
+        }
+
+        /*img{width: 50px; height:50px;}*/
+        a {
+            font-size: 1.2em;
+        }
+
+        #nav a:visited {
+            color: gray;
+        }
+
+        #nav a:hover {
+            color: white;
+        }
+
+        #nav i:hover {
+            color: blue;
+        }
+
+        #nav a {
+            text-decoration: none;
+            display: block;
+        }
+
+        #cir {
+            border-radius: 50%;
+            padding: 20px 30px 20px 30px;
+            width: 130px;
+            height: 90px;
+        }
+
+        figcaption {
+            color: white;
+            font-size: 2em;
+        }
+
+        #i {
+            color: gray;
+            font-size: 30px;
+            padding-left: 0.5em;
+        }
+
+        #li {
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 40px;
+        }
+
+        ul li {
+            width: 30px;
+            height: 30px;
+            background-color: gray;
+            border: 2px solid gray;
+            margin: 7px;
+            list-style: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+
+        }
+
+        ul li i {
+            color: white;
+
+        }
+
+        ul li:before {
+            content: "";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background-color: blue;
+            border-radius: 50%;
+            transtion: all 0.3s linear;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        ul li:hover:before {
+            transform: scale(0.8);
+            opacity: 1;
+
+        }
+
+        ul li:hover i {
+            color: blue;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        /*#profile {
+          padding: 0;
+          margin: 0 auto 20px auto;
+          list-style: none;
+          text-align: center;
+          background: yellow;
+          border-radius: 50%;
+          padding: 5px 5px;
+        }
+        #profile li{
+          cursor: pointer;
+          display: inline-block;
+          padding: 20px 30px 10px 30px;
+          font-size: 50px;
+          font-weight: 500;
+          line-height: 1;
+          text-transform: uppercase;
+          color: white;
+          margin-bottom: 5px;
+          transition: all 0.3s ease-in-out;
+        }*/
+    </style>
+</head>
+<body>
+<div id="left">
+    <br>
+    <div id="navbar">
+        <center>
+            <img src="../static/images/profile.png" th:src="@{/images/profile.png}" id="cir" width="100px" height="100px"><br>
+            <figcaption><b>Blood Donation</b></figcaption>
+        </center>
+        <br>
+
+        <div id="li">
+            <ul>
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                <li><i class="fa fa-skype" aria-hidden="true"></i></li>
+                <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+
+        <br><br>
+        <div id="nav">
+            <table>
+                <tr>
+                    <td><i class="fa fa-home" aria-hidden="true" id="i"></i>
+                    </td>
+                    <td></td>
+                    <td>
+                        <a th:href="@{/home}">Home</a></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><i class="fa fa-user" aria-hidden="true" id="i"></i>
+                    </td>
+                    <td></td>
+                    <td><a th:href="@{/donor}">Donor</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-file" aria-hidden="true" id="i"></i>
+
+                </td>
+                <td></td>
+                <td><a th:href="@{/patient}">Patient</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-tint" aria-hidden="true" id="i"></i>
+                </td>
+                <td></td>
+                <td><a th:href="@{/donorsList}">Donation</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-tint" aria-hidden="true" id="i"></i>
+
+                </td>
+                <td></td>
+                <td><a th:href="@{/patientsList}">Required Blood</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-address-card" aria-hidden="true" id="i"></i>
+
+                </td>
+                <td></td>
+                <td><a th:href="@{/about}">About</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-sign-out" aria-hidden="true" id="i"></i>
+
+                </td>
+                <td></td>
+                <td><a th:href="@{/index}">Logout</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="right"  th:style=" 'background-image: url(images/blood.jpg)'"><br><br>
+    <h1 align="center">Blood Bank Management System</h1>
+
+</div>
+</body>
