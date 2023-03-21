@@ -1,10 +1,8 @@
 # Blood_Bank_Management_System
 
-<h1 align="center">
 ## System Flow Diagram
 ![System Flow Diagram](https://user-images.githubusercontent.com/71971771/226562380-0b83448c-486c-402f-9257-ebb07202da16.png)
 
-  <h1 align="center">
 ## Entity Relationship
 ![ER](https://user-images.githubusercontent.com/71971771/226562957-8ba3d463-66ff-4de5-9a40-801d8e61ab4a.png)
 
@@ -12,7 +10,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Clone Project](#clone-project)
-*  [Contact Me](#contact)
+* [Contact Me](#contact)
 
 <a name="general-info"></a>
 ## General info
@@ -34,7 +32,7 @@ Clone the repo
 git clone https://github.com/yoonmyatphoo-mmr/Blood_Bank_Management_System.git
 
  <a name="contact"></a>
-  ## ✉ Contact me
+ ## Contact me
     Name - Yoon Myat Phoo <br> LinkedIn profile -  [Yoon Myat Phoo's LinkedIn](https://www.linkedin.com/in/yoon-myat-phoo-9b32531b7/)  <br> Email Address - yoonmyatphoo.mmr@gmail.com
 
 
