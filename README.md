@@ -1,5 +1,8 @@
 # Blood_Bank_Management_System
 
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/yoon-myat-phoo-9b32531b7
 
 ## System Flow Diagram
 <a name="#overview"></a>
@@ -39,7 +42,7 @@ git clone https://github.com/yoonmyatphoo-mmr/Blood_Bank_Management_System.git
  <a name="contact"></a>
  ### ✉Contact me
     Name - Yoon Myat Phoo<br> 
-    LinkedIn profile -  [@Yoon Myat Phoo's LinkedIn](https://www.linkedin.com/in/yoon-myat-phoo-9b32531b7)  <br>
+    LinkedIn profile -  [Yoon Myat Phoo's LinkedIn](https://www.linkedin.com/in/yoon-myat-phoo-9b32531b7)  <br>
     Email Address - yoonmyatphoo.mmr@gmail.com
     
     	
