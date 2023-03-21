@@ -1,0 +1,99 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>List Donors</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous"/>
+
+    <style>
+
+        th,td{
+            border-color: #080808 !important;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body style="background-color:#ebccd1">
+
+
+<div class="back">
+    <a th:href="@{/back}" class="btn btn-info">Back</a>
+
+</div>
+
+
+<div class="container">
+
+
+    <h3>Donor's Lists</h3>
+
+    <hr/>
+    <form th:action="@{/searchDonor}" method="get">
+        <input type="text" name="keyword" th:value="${keyword}" placeholder="Find by Id or Address or Blood"
+               size="50">
+        <button type="submit" class="btn btn-info">Search</button>
+    </form>
+    <br/><br/>
+    <table class="table table-bordered table-striped">
+
+        <thead class="thead-dark">
+        <tr>
+            <th>id</th>
+            <th>donorName</th>
+            <th>phoneNo</th>
+            <th>age</th>
+            <th>disease</th>
+            <th>address</th>
+            <th>blood</th>
+            <th>date</th>
+            <th>gender</th>
+
+            <!--            if-->
+            <!-- <div th:with="us=${session.user}"></div>
+             <div th:if="${us.roleId}"></div>
+             console.log("${us}");
+             <div th:switch="${us.roleId}">
+                 <p th:case="1">User is an administrator</p>
+                 <p th:case="#{roles.manager}">User is a manager</p>
+                 <p th:case="*">User is some other thing</p>
+             </div>-->
+
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="donors: ${donorsList}">
+
+            <td th:text="${donors.id}"/>
+            <td th:text="${donors.donorName}"/>
+            <td th:text="${donors.phoneNo}"/>
+            <td th:text="${donors.age}"/>
+            <td th:text="${donors.disease}"/>
+            <td th:text="${donors.address}"/>
+            <td th:text="${donors.blood}"/>
+            <td th:text="${donors.date}"/>
+            <td th:text="${donors.gender}"/>
+
+            <!--            if(session.get user.getRoleId != 1)-->
+            <!--            hide-->
+            <td>
+                <!--   <a th:href="@{/showUpdateForm(donorId=${donors.id})}" class="btn btn-info">Update</a>-->
+
+                <a th:href="@{/deleteDonors(donorId=${donors.id})}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+
+        <a th:href="@{/addNewDonor}" class="btn btn-primary btn-sm mb-3">Add Donors</a>
+    </table>
+</div>
+
+
+</body>
+
+</html>

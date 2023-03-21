@@ -1,0 +1,533 @@
+<html xmlns: th="http://www.thymeleaf.org">
+<head>
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #navbar {
+            position: sticky;
+            top: 0;
+        }
+
+        #nav{
+            height:35%;
+        }
+        #left {
+            float: left;
+            width: 250px;
+            height: 1200px;
+            background-color: white;
+        }
+
+        #right {
+
+            background-size: cover;
+            height: 1200px;
+
+
+        }
+
+        #nav a:link {
+            color: gray;
+        }
+
+        /*img{width: 50px; height:50px;}*/
+        a {
+            color: red;
+            font-size: 1.2em;
+            font-weight: 700;
+            font-family:"Times New Roman", Times, serif;
+        }
+
+        #nav a:visited {
+            /*color: gray;*/
+        }
+
+        #nav a:hover {
+            color: #5bc0de;
+        }
+
+        #nav i:hover {
+            color: #5bc0de;
+        }
+
+        #nav a {
+            text-decoration: none;
+            display: block;
+        }
+
+        #cir {
+            border-radius: 50%;
+            padding: 20px 30px 20px 30px;
+            width: 130px;
+            height: 90px;
+        }
+
+        figcaption {
+            color: red;
+            font-size: 2em;
+            font-family:"Times New Roman", Times, serif;
+        }
+
+        #i {
+            color: red;
+            font-size: 30px;
+            padding-left: 0.5em;
+        }
+
+        #li {
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 40px;
+        }
+
+        ul li {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+
+            margin: 7px;
+            list-style: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+
+        }
+
+        ul li i {
+            color: white;
+
+        }
+
+        ul li:before {
+            content: "";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background-color: blue;
+            border-radius: 50%;
+            transtion: all 0.3s linear;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        ul li:hover:before {
+            transform: scale(0.8);
+            opacity: 1;
+
+        }
+
+        ul li:hover i {
+            color: #5bc0de;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        #title1 {
+            color: white;
+            padding-left: 70px;
+            top: 2px;
+        }
+
+
+        .container {
+            background: #204d74;
+            width: 400px;
+            height: 700px;
+            padding-bottom: 10px;
+            position: absolute;
+            top: 110%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+            padding: 10px 50px 10px 50px;
+        }
+
+
+        .fl {
+            float: left;
+            width: 110px;
+            line-height: 35px;
+
+        }
+        h1{
+
+            font-family:"Times New Roman", Times, serif;
+        }
+
+        .fontLabel {
+            color: white;
+        }
+
+        .fr {
+            float: right;
+            width: 200px;
+
+        }
+
+        #btype {
+            width: 190px;
+            height: 40px;
+        }
+
+        .clr {
+            clear: both;
+        }
+
+        .box {
+
+
+            width: 360px;
+            height: 35px;
+            margin-top: 20px;
+            font-family: verdana;
+            font-size: 12px;
+        }
+
+        .textBox {
+            height: 35px;
+            width: 190px;
+            border: none;
+            padding-left: 20px;
+        }
+
+        .new {
+            float: left;
+        }
+
+        .iconBox {
+            height: 35px;
+            width: 40px;
+            line-height: 36px;
+            text-align: center;
+
+
+            background: #ff6600;
+        }
+
+        .radio {
+            color: white;
+            line-height: 38px;
+        }
+
+        .terms {
+            line-height: 35px;
+            text-align: center;
+
+            color: white;
+        }
+
+        .submit {
+            float: right;
+            border: none;
+            color: black;
+            width: 110px;
+            height: 35px;
+            background: #ff6600;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+        }
+    </style>
+</head>
+<body>
+<div id="left">
+    <br>
+    <div id="navbar">
+        <center>
+            <img src="../static/images/profile.png" th:src="@{/images/profile.png}" id="cir" width="100px"
+                 height="100px"><br>
+            <figcaption><b>Blood Bank</b></figcaption>
+        </center>
+        <br>
+
+        <div id="li">
+            <ul>
+                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                <li><i class="fa fa-skype" aria-hidden="true"></i></li>
+                <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+
+        <br><br>
+        <div id="nav">
+            <table>
+                <tr>
+                    <td><i class="fa fa-home" aria-hidden="true" id="i"></i>
+                    </td>
+                    <td></td>
+                    <td>
+                        <a th:href="@{/home}">Home</a></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><i class="fa fa-user" aria-hidden="true" id="i"></i>
+                    </td>
+                    <td></td>
+                    <td><a th:href="@{/donor}">Donor</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-file" aria-hidden="true" id="i"></i>
+
+                </td>
+                <td></td>
+                <td><a th:href="@{/patient}">Patient</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-tint" aria-hidden="true" id="i"></i>
+                </td>
+                <td></td>
+                <td><a th:href="@{/donorsList}">Donation</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-tint" aria-hidden="true" id="i"></i>
+
+                </td>
+                <td></td>
+                <td><a th:href="@{/patientsList}">Required Blood</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-address-card" aria-hidden="true" id="i"></i>
+
+                </td>
+                <td></td>
+                <td><a th:href="@{/about}">About</a></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <td><i class="fa fa-sign-out" aria-hidden="true" id="i"></i>
+
+                </td>
+                <td></td>
+                <td><a th:href="@{/logout}">Logout</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="right" style="background-color: #F7CAC9"><br><br>
+    <h1 align="center">Blood Bank Management System</h1>
+    <!-- Body of Form starts -->
+
+    <script th:inline="javascript">
+        var patimsg = [[${session.patimsg}]];
+        if(patimsg != null)
+            window.alert(patimsg);
+    </script>
+    <div class="container">
+
+        <div id="title1"><h1 id="title">Patient Form</h1></div>
+        <br>
+        <form method="post" th:action="@{/patient}" th:object="${patientsModel}" autocomplete="on">
+
+            <!--patient name-->
+            <div class="box">
+                <label for="firstName" class="fl fontLabel"> Patient's Name: </label>
+                <div class="new iconBox">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="fr">
+                    <input type="text" name="patientName" placeholder="Patient's Name"
+                           class="textBox" autofocus="on" required>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Donar name-->
+
+
+            <!---Phone No.------>
+            <div class="box">
+                <label for="phone" class="fl fontLabel"> Phone No.: </label>
+                <div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="text" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!---Phone No.---->
+
+
+            <!---Age---->
+            <div class="box">
+                <label for="age" class="fl fontLabel"> Age: </label>
+                <div class="fl iconBox"><i class="fa fa-street-view" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="age" required name="age" placeholder="Age" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Age----->
+
+
+            <!---Date---->
+            <div class="box">
+                <label for="date" class="fl fontLabel"> Date: </label>
+                <div class="fl iconBox"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="Date" required name="date" placeholder="Email Id" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Date----->
+            <!--Address-->
+            <div class="box">
+                <label for="address" class="fl fontLabel"> Address: </label>
+                <div class="fl iconBox"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="text" required name="address" placeholder="address" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Address-->
+            <!---Password------>
+            <div class="box">
+                <label for="blood" class="fl fontLabel"> Required Blood </label>
+                <div class="fl iconBox"><i class="fa fa-tint" aria-hidden="true"></i></div>
+                <div class="fr">
+
+                    <!--<select id="btype">
+
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select>-->
+                    <select name="blood">
+                        <option th:each="blood: ${bloodList}"
+                                th:text="${blood}"/>
+                    </select>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!---Password---->
+
+            <!---Gender----->
+            <div class="box radio">
+                <label for="gender" class="fl fontLabel"> Gender: </label>
+                <input type="radio" name="gender" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="gender" value="Female" required> Female
+            </div>
+            <!---Gender--->
+
+
+            <!--Terms and Conditions------>
+            <div class="box terms">
+                <input type="checkbox" name="Terms" required> &nbsp; I accept the terms and conditions
+            </div>
+            <!--Terms and Conditions------>
+
+
+            <!---Submit Button------>
+            <div class="box">
+                <input type="Submit" name="Submit" class="submit" value="SUBMIT">
+            </div>
+            <!---Submit Button----->
+        </form>
+    </div>
+    <!--Body of Form ends--->
+</div>
+
+</body>

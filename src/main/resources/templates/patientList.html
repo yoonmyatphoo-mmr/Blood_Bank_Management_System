@@ -1,0 +1,75 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>List Patients</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous" />
+
+    <style>
+
+        th,td{
+            border-color: #080808 !important;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body style="background-color:#ebccd1">
+
+<div class="back">
+    <a th:href="@{/back}" class="btn btn-info">Back</a>
+
+</div>
+
+<div class="container">
+
+    <h3>Patient's Lists</h3>
+
+    <hr/>
+
+    <br/><br/>
+    <table class="table table-bordered table-striped">
+
+        <thead class="thead-dark">
+        <tr>
+            <th>id</th>
+            <th>patientName</th>
+            <th>phoneNo</th>
+            <th>age</th>
+            <th>address</th>
+            <th>blood</th>
+            <th>date</th>
+            <th>gender</th>
+<!--            <th>action</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="patients: ${patientUserList}">
+
+            <td th:text="${patients.id}" />
+            <td th:text="${patients.patientName}" />
+            <td th:text="${patients.phoneNo}" />
+            <td th:text="${patients.age}" />
+            <td th:text="${patients.address}" />
+            <td th:text="${patients.blood}" />
+            <td th:text="${patients.date}" />
+            <td th:text="${patients.gender}" />
+            <!--<td>
+                <a th:href="@{/patientShowUpdateForm(patientId=${patients.id})}" class="btn btn-info">Update</a>
+
+                <a th:href="@{/patientDeleteDonors(patientId=${patients.id})}" class="btn btn-danger ml-2">Delete</a>
+            </td>-->
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+
+</body>
+
+</html>
