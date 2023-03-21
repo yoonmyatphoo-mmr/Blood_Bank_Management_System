@@ -1,11 +1,12 @@
 # Blood_Bank_Management_System
 
-<a name="#overview"></a>
+
 ## System Flow Diagram
+<a name="#overview"></a>
 ![System Flow Diagram](https://user-images.githubusercontent.com/71971771/226562380-0b83448c-486c-402f-9257-ebb07202da16.png)
 
-<a name="#overview"></a>
 ## Entity Relationship
+<a name="#overview"></a>
 ![ER](https://user-images.githubusercontent.com/71971771/226562957-8ba3d463-66ff-4de5-9a40-801d8e61ab4a.png)
 
 # Table of Contents
@@ -28,15 +29,20 @@ Project is created with:
 * Thymeleaf
 * Javascript
 
- <a name="contact"></a>
- ## Contact me
-    Name - Yoon Myat Phoo <br> LinkedIn profile -  [Yoon Myat Phoo's LinkedIn](https://www.linkedin.com/in/yoon-myat-phoo-9b32531b7/)  <br> Email Address - yoonmyatphoo.mmr@gmail.com
-    
-    	
  <a name="clone-project"></a>
-## 🥡Clone Project
+### 🥡Clone Project
 * Clone the repo
 ```sh
 git clone https://github.com/yoonmyatphoo-mmr/Blood_Bank_Management_System.git
+
+
+ <a name="contact"></a>
+ ### ✉Contact me
+    Name - Yoon Myat Phoo<br> 
+    LinkedIn profile -  [Yoon Myat Phoo's LinkedIn](https://www.linkedin.com/in/yoon-myat-phoo-9b32531b7/)  <br>
+    Email Address - yoonmyatphoo.mmr@gmail.com
+    
+    	
+
 
 
