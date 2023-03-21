@@ -1,14 +1,18 @@
 # Blood_Bank_Management_System
 
+<p align="center">
 <a name="overview"></a>
 ## System Flow Diagram
 ![System Flow Diagram](https://user-images.githubusercontent.com/71971771/226562380-0b83448c-486c-402f-9257-ebb07202da16.png)
+</p>
 
+<p align="center">
 <a name="overview"></a>
 ## Entity Relationship
 ![ER](https://user-images.githubusercontent.com/71971771/226562957-8ba3d463-66ff-4de5-9a40-801d8e61ab4a.png)
+</p>
 	
-# Table of Contents
+## Table of Contents
 * [Overview](#overview)
 * [General info](#general-info)
 * [Technologies](#technologies)
