@@ -28,7 +28,7 @@ Project is created with:
  <a name="clone-project"></a>
 ## Clone Project
 Clone the repo
-```sh
+sh
 git clone https://github.com/yoonmyatphoo-mmr/Blood_Bank_Management_System.git
 
  <a name="contact"></a>
