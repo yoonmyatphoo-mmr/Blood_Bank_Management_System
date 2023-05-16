@@ -29,7 +29,7 @@ The main aim of this project is to help the people who needs blood in emergency 
 Project is created with:
 * Java
 * Spring MVC
-* Spring Data JAP
+* Spring Data JPA
 * Thymeleaf
 * Javascript
 * MySQL Database
